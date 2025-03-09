@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Guardian</title>
+  <link rel="stylesheet" href="styles/popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="images/icon48.png" alt="Email Guardian Logo">
+      <h1>Email Guardian</h1>
+    </header>
+    
+    <div class="status-section">
+      <div class="status-indicator" id="status">
+        <span class="status-dot active"></span>
+        <span class="status-text">Active</span>
+      </div>
+      <div class="user-info">
+        <span id="current-user">User: PixelCode01</span>
+        <span id="current-time">2025-03-08 05:29:29</span>
+      </div>
+    </div>
+    
+    <div class="settings-section">
+      <h2>API Keys</h2>
+      <form id="api-form">
+        <div class="form-group">
+          <label for="gemini-api-key">Gemini API Key:</label>
+          <input type="password" id="gemini-api-key" placeholder="Enter Gemini API key">
+        </div>
+        
+        <div class="form-group">
+          <label for="virustotal-api-key">VirusTotal API Key (Optional):</label>
+          <input type="password" id="virustotal-api-key" placeholder="Enter VirusTotal API key">
+        </div>
+        
+        <button type="submit" class="btn-primary">Save Settings</button>
+      </form>
+      
+      <div class="api-info">
+        <p>⚠️ Required: <a href="https://ai.google.dev/" target="_blank">Get a free Gemini API key</a></p>
+        <p>Optional: <a href="https://www.virustotal.com/gui/join-us" target="_blank">Get a free VirusTotal API key</a></p>
+      </div>
+    </div>
+    
+    <div class="stats-section">
+      <h2>Statistics</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-count" id="emails-analyzed">0</span>
+          <span class="stat-label">Emails Analyzed</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-count" id="threats-detected">0</span>
+          <span class="stat-label">Threats Detected</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-count" id="links-scanned">0</span>
+          <span class="stat-label">Links Checked</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-count" id="attachments-scanned">0</span>
+          <span class="stat-label">Files Scanned</span>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>Email Guardian v1.0.0</p>
+      <p>&copy; 2025 PixelCode01</p>
+    </footer>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
